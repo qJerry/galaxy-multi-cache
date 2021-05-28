@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+    <property name="LOG_HOME" value="../logs/galaxy" />
+    <appender name="STDOUT"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <encoder
+                class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>[%X{requestId}] %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{50}:%line - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.github.qjerry" level="DEBUG"/>
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
